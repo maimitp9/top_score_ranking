@@ -11,7 +11,7 @@ describe ApplicationError do
     end
   end
 
-  context 'with #errors_for_response' do
+  describe '#errors_for_response' do
     it 'raises a NotImplementedError' do
       expect do
         error.errors_for_response
@@ -19,7 +19,7 @@ describe ApplicationError do
     end
   end
 
-  context 'with #error_logs' do
+  describe '#error_logs' do
     it 'build the logs from exception' do
       exception = StandardError.new('test')
       exception.set_backtrace([])
