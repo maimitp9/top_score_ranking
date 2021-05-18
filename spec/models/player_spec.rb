@@ -6,7 +6,7 @@ RSpec.describe Player, type: :model do
   let(:player) { build(:player) }
 
   context 'with validations' do
-    it 'check the presense of player name' do
+    it 'check the presence of player name' do
       player.name = nil
       player.valid?
       expect(player.errors[:name]).to include(/can't be blank/)
