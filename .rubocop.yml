@@ -1,0 +1,21 @@
+require:
+  - rubocop-rails
+  - rubocop-rspec
+AllCops:
+  TargetRubyVersion: 3.0.1
+  TargetRailsVersion: 6.1.3
+  Exclude:
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+    - 'test/**/*'
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*
+    - spec/**/*
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+Documentation:
+    Enabled: false
