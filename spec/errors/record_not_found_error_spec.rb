@@ -15,7 +15,7 @@ describe RecordNotFoundError do
     it 'returns a array os error' do
       expect(error.errors_for_response).to include({
                                                      message: /The target item does not exist/,
-                                                     code: 120_002
+                                                     code: 404_002
                                                    })
     end
   end

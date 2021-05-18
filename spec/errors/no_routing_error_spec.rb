@@ -15,7 +15,7 @@ describe NoRoutingError do
     it 'returns an array of error' do
       expect(error.errors_for_response).to include({
                                                      message: /No routing: random_path/,
-                                                     code: 120_001
+                                                     code: 404_001
                                                    })
     end
   end
