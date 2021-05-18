@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationError
-  # Note: If you do not overwrite this constant, you will get a 500 error
+  # NOTE: If you do not overwrite this constant, you will get a 500 error
   HTTP_STATUS_CODE = 500
 
   def http_status_code
