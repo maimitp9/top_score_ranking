@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rails_helper'
+
 describe InternalServerError do
   let(:error) { described_class.new(request_id: 'random-id') }
 
