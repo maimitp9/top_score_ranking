@@ -8,4 +8,5 @@ class ErrorCodes
 
   # Routing / 404
   NO_ROUTING = BASE_NOT_FOUND_ERROR + 1
+  RECORD_NOT_FOUND = BASE_NOT_FOUND_ERROR + 2
 end
