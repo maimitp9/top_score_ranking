@@ -2,7 +2,7 @@
 
 module Api
   class ScoresController < ApplicationController
-    before_action :set_score, only: %i[show]
+    before_action :set_score, only: %i[show destroy]
 
     def show
       render json: @score, include: [:player]
@@ -17,6 +17,12 @@ module Api
       else
         render ModelInvalidError.to_response(service)
       end
+    end
+
+    def destroy
+      @score.destroy!
+
+      head :ok
     end
 
     private
