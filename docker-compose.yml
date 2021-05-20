@@ -4,9 +4,13 @@ services:
     image: postgres:12.3
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
     environment:
       POSTGRES_PASSWORD: postgres
-  top_score_ranking:
+  web:
     build: .
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:

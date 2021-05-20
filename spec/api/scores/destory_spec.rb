@@ -14,7 +14,6 @@ resource 'Scores' do
     let(:id) { score.id }
 
     context 'with 200 status' do
-      # rubocop:disable RSpec/MultipleExpectations
       example 'Deleting an score' do
         expect do
           do_request
@@ -22,7 +21,6 @@ resource 'Scores' do
 
         expect(status).to eq(200)
       end
-      # rubocop:enable RSpec/MultipleExpectations
     end
   end
 end

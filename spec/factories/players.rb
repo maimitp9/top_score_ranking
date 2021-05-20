@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :player do
-    name { 'player_name' }
+    sequence(:name) { |n| "player_name#{n}" }
   end
 end
