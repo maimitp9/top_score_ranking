@@ -17,5 +17,8 @@ Metrics/BlockLength:
 Lint/AmbiguousBlockAssociation, RSpec/MultipleExpectations:
   Exclude:
     - spec/**/*
+RSpec/MultipleMemoizedHelpers:
+  Exclude:
+    - spec/**/*
 Documentation:
     Enabled: false
