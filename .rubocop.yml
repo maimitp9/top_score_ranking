@@ -14,7 +14,10 @@ Metrics/BlockLength:
   Exclude:
     - config/**/*
     - spec/**/*
-Lint/AmbiguousBlockAssociation:
+Lint/AmbiguousBlockAssociation, RSpec/MultipleExpectations:
+  Exclude:
+    - spec/**/*
+RSpec/MultipleMemoizedHelpers:
   Exclude:
     - spec/**/*
 Documentation:

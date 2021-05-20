@@ -4,6 +4,20 @@ module Api
   class ScoresController < ApplicationController
     before_action :set_score, only: %i[show destroy]
 
+    def index
+      search = Scores::IndexQuery.new(search_params)
+
+      if search.valid?
+        scores = search.call
+
+        render json: scores,
+               include: search.include_in_serializer,
+               meta: { total_count: search.total_count }
+      else
+        render ModelInvalidError.to_response(search)
+      end
+    end
+
     def show
       render json: @score, include: [:player]
     end
@@ -29,6 +43,10 @@ module Api
 
     def create_params
       params.require(:score).permit(:name, :score_point, :score_at)
+    end
+
+    def search_params
+      params.permit(:name, :before_score_date, :after_score_date, :limit, :offset).merge(includes: 'player')
     end
 
     def set_score
