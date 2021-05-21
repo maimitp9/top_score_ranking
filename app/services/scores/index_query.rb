@@ -24,6 +24,10 @@ module Scores
       end
     end
 
+    def includes
+      'player'
+    end
+
     private
 
     # Filter

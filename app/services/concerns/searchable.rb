@@ -20,8 +20,6 @@
 # This will enable the block method `perform_search` to build
 # the respective queries regarding includes, select, limit, offset
 # around the block.
-# to be ordered by. Can add the symbol "-" to reverse that order.
-
 module Searchable
   extend ActiveSupport::Concern
 
