@@ -1,6 +1,6 @@
 # Top Score Ranking
 
-This application only implemented APIs, will be used to keep scores for for a group of player.
+This application only implemented APIs, will be used to keep scores for a group of player.
 
 ## Getting Started
 
