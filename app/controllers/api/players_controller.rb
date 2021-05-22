@@ -3,7 +3,7 @@
 module Api
   class PlayersController < ApplicationController
     def show
-      service = Players::ProfileQuery.new(show_params)
+      service = Players::ProfileQuery.new(id: params[:id])
       if service.valid?
         player = service.call
 
@@ -11,12 +11,6 @@ module Api
       else
         render ModelInvalidError.to_response(service)
       end
-    end
-
-    private
-
-    def show_params
-      params.permit(:id)
     end
   end
 end
