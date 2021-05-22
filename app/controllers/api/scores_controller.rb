@@ -46,7 +46,7 @@ module Api
     end
 
     def search_params
-      params.permit(:name, :before_score_date, :after_score_date, :limit, :offset).merge(includes: 'player')
+      params.permit(:name, :before_score_date, :after_score_date, :limit, :offset)
     end
 
     def set_score
